@@ -1,0 +1,5 @@
+[submodule "components/ps3"]
+	path = components/ps3
+	url = git@github.com:jvpernis/esp32-ps3.git
+[submodule "git@github.com:simonliu009/esp32-ps3-2022.git"]
+	url = components/ps3
