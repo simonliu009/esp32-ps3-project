@@ -135,7 +135,9 @@ void controller_event_cb( ps3_t ps3, ps3_event_t event )
 
 void app_main()
 {
-    printf("Hello world!\n");
+    uint8_t BlueTooth[6] = {0};
+    esp_read_mac(BlueTooth, ESP_MAC_BT);
+    printf("BlueToothMAC:%02X:%02X:%02X:%02X:%02X:%02X\n",BlueTooth[0],BlueTooth[1],BlueTooth[2],BlueTooth[3],BlueTooth[4],BlueTooth[5]);
     esp_err_t ret;
     ret = nvs_flash_init();
     if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
